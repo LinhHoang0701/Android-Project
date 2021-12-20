@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Payment">
+
+    <include
+        android:id="@+id/include3"
+        layout="@layout/app_bar_store_home_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/lblName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
+        android:text="Customer"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/include3" />
+
+    <EditText
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:enabled="false"
+        android:hint="Customer name"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        app:layout_constraintBaseline_toBaselineOf="@+id/lblName"
+        app:layout_constraintStart_toEndOf="@+id/lblName" />
+
+    <TextView
+        android:id="@+id/lblPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="\Phone"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/lblName"
+        app:layout_constraintTop_toBottomOf="@+id/lblName" />
+
+    <EditText
+        android:id="@+id/txtPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:enabled="false"
+        android:hint="\Phone"
+        android:inputType="phone"
+        android:textColor="#000000"
+        app:layout_constraintBaseline_toBaselineOf="@+id/lblPhone"
+        app:layout_constraintStart_toStartOf="@+id/txtName" />
+
+    <TextView
+        android:id="@+id/lblAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Address"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/lblPhone"
+        app:layout_constraintTop_toBottomOf="@+id/lblPhone" />
+
+    <EditText
+        android:id="@+id/txtAddress"
+        android:layout_width="363dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:lines="2"
+        android:maxLines="5"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/lblAddress"
+        app:layout_constraintTop_toBottomOf="@+id/lblAddress" />
+
+    <TextView
+        android:id="@+id/lblPayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Payment Method"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/txtAddress"
+        app:layout_constraintTop_toBottomOf="@+id/txtAddress" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="330dp"
+        android:layout_height="179dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblPayment">
+
+        <RadioButton
+            android:id="@+id/btnCash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="Cash On Delivery"
+            android:textColor="#000000" />
+
+        <RadioButton
+            android:id="@+id/btnInternet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Internet Banking"
+            android:textColor="#000000" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnBuy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Buy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+
+</android.support.constraint.ConstraintLayout>

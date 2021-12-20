@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+    <TextView
+        android:id="@+id/lblTitle1"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:text="tên và số lượng món hàng khác"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/lblMasterId1"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblTitle1"
+        android:paddingLeft="10dp"
+        android:text="id đơn hàng"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/lblDate1"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblMasterId1"
+        android:paddingLeft="10dp"
+        android:text="Ngày đặt hàng"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/lblStatus1"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblDate1"
+        android:paddingLeft="10dp"
+        android:text="Trạng thái"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/imgStatus"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_toRightOf="@id/lblTitle1"
+        app:srcCompat="@drawable/ic_check_black_24dp" />
+</RelativeLayout>
